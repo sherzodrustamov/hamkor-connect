@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamkor Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-area">
+            <img src="assets/image.png" alt="Hamkor Connect Logo" class="logo">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-uz="Bosh sahifa" data-ru="Главная">Bosh sahifa</a></li>
+            <li><a href="#about" data-uz="Biz haqimizda" data-ru="О нас">Biz haqimizda</a></li>
+            <li><a href="#services" data-uz="Xizmatlar" data-ru="Услуги">Xizmatlar</a></li>
+            <li><a href="#contact" data-uz="Aloqa" data-ru="Контакты">Aloqa</a></li>
+            <li><a href="#partners" data-uz="Hamkorlar" data-ru="Партнеры">Hamkorlar</a></li>
+
+        </ul>
+        <div class="actions">
+            <select id="langSelect" onchange="setLang(this.value)">
+                <option value="uz">UZ</option>
+                <option value="ru">RU</option>
+            </select>
+
+            <div class="menu_icon">
+                <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title" data-uz="Biznesingiz uchun zamonaviy qo‘llab-quvvatlash markazi"
+                data-ru="Современный контакт-центр для вашего бизнеса">
+                Biznesingiz uchun zamonaviy qo‘llab-quvvatlash markazi
+            </h1>
+
+            <p data-uz="Mijozlaringizni 24/7 qo‘llab-quvvatlash xizmatlari." data-ru="Поддержка ваших клиентов 24/7.">
+                Mijozlaringizni 24/7 qo‘llab-quvvatlash xizmatlari.
+            </p>
+
+            <a href="#services" class="btn"><i class="fas fa-headset"></i> Xizmatlarni ko‘rish</a>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2 data-uz="Biz haqimizda" data-ru="О нас">Biz haqimizda</h2>
+        <div class="about-content">
+            <p data-uz="Hamkor Connect — bu professional aloqa markazi (call-center) bo‘lib, biz sizning biznesingizni mijozlar bilan samarali bog‘lab beramiz."
+                data-ru="Hamkor Connect — профессиональный контакт-центр, который помогает вашему бизнесу эффективно взаимодействовать с клиентами.">
+                Hamkor Connect — bu professional aloqa markazi (call-center).
+            </p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> <span
+                        data-uz="Operatorlar uchun aniq ish algoritmlari va skriptlar"
+                        data-ru="Разработка алгоритмов и скриптов для операторов">Operatorlar uchun aniq ish
+                        algoritmlari va skriptlar</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="Operatorlarni o‘qitish va qo‘llab-quvvatlash"
+                        data-ru="Обучение и поддержка операторов">Operatorlarni o‘qitish va qo‘llab-quvvatlash</span>
+                </li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="Qo‘ng‘iroqlarni qabul qilish va yozib olish "
+                        data-ru="Прием и запись звонков">Qo‘ng‘iroqlarni qabul qilish va yozib olish
+                    </span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="Qo‘ng‘iroqlar sifatini monitoring qilish"
+                        data-ru="Контроль качества звонков">Qo‘ng‘iroqlar sifatini monitoring qilish</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="Statistik va tahliliy hisobotlar (oylik)"
+                        data-ru="Ежемесячные статистические и аналитические отчеты">Statistik va tahliliy hisobotlar
+                        (oylik)</span></li>
+                <li><i class="fas fa-check-circle"></i> <span
+                        data-uz="Telegram va email orqali tezkor ma’lumot yetkazish"
+                        data-ru="Быстрая передача данных через Telegram">Telegram orqali tezkor
+                        ma’lumot yetkazish</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="Shikoyat, savol va takliflarni qayd qilish"
+                        data-ru="Фиксация жалоб, вопросов и предложений">Shikoyat, savol va takliflarni qayd
+                        qilish</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="Ko‘p kanalli aloqa raqamlari"
+                        data-ru="Многоканальные номера">Ko‘p kanalli aloqa raqamlari</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-uz="24/7 Aloqa markazi"
+                        data-ru="Круглосуточная горячая линия 24/7">24/7 Aloqa markazi</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Services / Tariffs -->
+    <section id="services" class="services">
+        <h2 data-uz="Tariflarimiz" data-ru="Наши тарифы">Tariflarimiz</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-phone-volume"></i>
+                <h3>Start</h3>
+                <p data-uz="1000 qo‘ng‘iroq / oy, kirish qo‘ng‘iroqlari, chat va shikoyatlar bilan ishlash"
+                    data-ru="1000 звонков / мес, входящие звонки, работа с чатами и жалобами">
+                    1000 qo‘ng‘iroq / oy, kirish qo‘ng‘iroqlari, chat va shikoyatlar bilan ishlash
+                </p>
+                <p class="price">3 500 000 so‘m</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-headset"></i>
+                <h3>Standart</h3>
+                <p data-uz="2000 qo‘ng‘iroq / oy, kirish qo‘ng‘iroqlari, chat va shikoyatlar va mijoz tizimlari"
+                    data-ru="2000 звонков / мес, входящие звонки, с чатами и жалобами и системами заказчика">
+                    2000 qo‘ng‘iroq / oy, kirish qo‘ng‘iroqlari, chat va shikoyatlar va mijoz tizimlari
+                </p>
+                <p class="price">5 500 000 so‘m</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-friends"></i>
+                <h3>Comfort</h3>
+                <p data-uz="3000 qo‘ng‘iroq / oy, kirish qo‘ng‘iroqlari, chat, shikoyatlar va tizimlar "
+                    data-ru="3000 звонков / мес, входящие звонки, работа с  жалобами, системами и входящими звонками">
+                    3000 qo‘ng‘iroq / oy, kirish qo‘ng‘iroqlari, chat va shikoyatlar, tizimlar va kirish qo‘ng‘iroqlari
+                </p>
+                <p class="price">7 500 000 so‘m</p>
+            </div>
+        </div>
+
+        <!-- Individual Plans -->
+        <div class="extra-tariffs">
+            <h3 data-uz="Katta hajmli qo‘ng‘iroqlar uchun tariflar" data-ru="Индивидуальные тарифы для больших объемов" style="margin-bottom: 40px;">
+                Katta hajmli qo‘ng‘iroqlar uchun tariflar
+            </h3>
+
+            <div class="tariff-cards">
+                <!-- Card 1 -->
+                <div class="tariff-card">
+                    <i class="fas fa-info-circle"></i>
+                    <h4 data-uz="Axborot qo‘llab-quvvatlash 24/7" data-ru="Информационная поддержка 24/7">
+                        Axborot qo‘llab-quvvatlash 24/7
+                    </h4>
+                    <p data-uz="5000 qo‘ng‘iroq / oy" data-ru="5000 звонков / мес">
+                        5000 qo‘ng‘iroq / oy
+                    </p>
+                    <p data-uz="11 500 000 so‘m" data-ru="11 500 000 сум">
+                        11 500 000 so‘m
+                    </p>
+                    <p class="price" data-uz="2300 so‘m qo‘shimcha" data-ru="2300 сум доп.">
+                        2300 so‘m qo‘shimcha
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tariff-card">
+                    <i class="fas fa-fire"></i>
+                    <h4 data-uz="24/7 Aloqa markazi" data-ru="Горячая линия 24/7">
+                        24/7 Aloqa markazi
+                    </h4>
+                    <p data-uz="10 000 qo‘ng‘iroq / oy" data-ru="10 000 звонков / мес">
+                        10 000 qo‘ng‘iroq / oy
+                    </p>
+                    <p data-uz="20 000 000 so‘m" data-ru="20 000 000 сум">
+                        20 000 000 so‘m
+                    </p>
+                    <p class="price" data-uz="2000 so‘m qo‘shimcha" data-ru="2000 сум доп.">
+                        2000 so‘m qo‘shimcha
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Outbound Calls -->
+        <div class="outbound">
+            <h3 data-uz="Chiqish qo‘ng‘iroqlari" data-ru="Исходящие звонки" style="margin-bottom: 40px;">
+                Chiqish qo‘ng‘iroqlari
+            </h3>
+
+            <div class="outbound-cards">
+                <!-- Card 1 -->
+                <div class="outbound-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h4 data-uz="Ma’lumot berish qo‘ng‘iroqlari" data-ru="Обзвон для информирования">
+                        Ma’lumot berish qo‘ng‘iroqlari
+                    </h4>
+                    <p data-uz="3-5 daqiqa" data-ru="3-5 минут">
+                        3-5 daqiqa
+                    </p>
+                    <p class="price" data-uz="5000 so‘m" data-ru="5000 сум">
+                        5000 so‘m
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="outbound-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4 data-uz="So‘rovnomalar" data-ru="Анкетирование">
+                        So‘rovnomalar
+                    </h4>
+                    <p data-uz="20-30 daqiqa" data-ru="20-30 минут">
+                        20-30 daqiqa
+                    </p>
+                    <p class="price" data-uz="45 000 so‘m" data-ru="45 000 сум">
+                        45 000 so‘m
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 data-uz="Biz bilan bog‘laning" data-ru="Свяжитесь с нами">
+            Biz bilan bog‘laning
+        </h2>
+
+        <!-- Avatar -->
+
+
+        <div class="contact">
+            <!-- Form -->
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Ism" required>
+                <input type="text" name="phone" placeholder="Telefon" required>
+                <textarea name="message" placeholder="Xabar" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Yuborish</button>
+
+                <!-- Contact Links -->
+                <div class="contact-social">
+                    <a href="tel:+998990704811" class="social-link phone">
+                        <i class="fa fa-phone"></i> Telefon
+                    </a>
+                    <a href="https://t.me/@nozli11" target="_blank" class="social-link telegram">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <a href="https://instagram.com/hamkor_connect" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </form>
+
+
+            <!-- Links -->
+            <p id="status"></p>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners" class="partners">
+        <h2 data-uz="Hamkorlarimiz" data-ru="Наши партнёры">Hamkorlarimiz</h2>
+        <div class="partners-grid">
+            <img src="assets/partner1.png" alt="Partner 1">
+            <img src="assets/partner2.png" alt="Partner 2">
+            <img src="assets/partner3.png" alt="Partner 3">
+            <img src="assets/partner4.png" alt="Partner 4">
+            <img src="assets/partner5.png" alt="Partner 5">
+            <img src="assets/partner6.png" alt="Partner 6">
+            <img src="assets/partner7.png" alt="Partner 7">
+            <img src="assets/partner8.png" alt="Partner 8">
+            <img src="assets/partner9.png" alt="Partner 9">
+            <img src="assets/partner10.png" alt="Partner 10">
+            <img src="assets/partner11.png" alt="Partner 11">
+            <img src="assets/partner12.png" alt="Partner 12">
+            <img src="assets/partner13.png" alt="Partner 13">
+            <img src="assets/partner14.png" alt="Partner 13" style="width: 130px;">
+            <img src="assets/partner15.jpg" alt="Partner 13" style="width: 160px;">
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><i class="fas fa-phone-volume"></i> +998 99 070 48 11</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

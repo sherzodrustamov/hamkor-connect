@@ -1,0 +1,1006 @@
+/* Asosiy ranglar */
+:root {
+    --red: #B22222;
+    --blue: #002b45;
+    --bg: #f9f9f9;
+    --text: #333;
+    --card-bg: #fff;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    /* Bu eng muhim qism: sahifaning aylanishini silliq qiladi */
+    scroll-behavior: smooth;
+}
+
+/* Umumiy container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    /* katta ekranlar uchun limit */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* yon tomonlarda bo‘sh joy */
+    box-sizing: border-box;
+}
+
+/* Responsiv qoida */
+@media(max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--card-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.company {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+    transition: .3s;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#langSelect {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.navbar .actions .menu_icon .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Hero umumiy */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    min-height: 80vh;
+    background: linear-gradient(to right, var(--red), var(--blue));
+    color: #fff;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Content chap taraf */
+.hero-content {
+    flex: 1;
+    width: 500px;
+    /* aniq width */
+}
+
+.hero-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #fff;
+    color: var(--red);
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hero .btn:hover {
+    background: #eee;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.contact h2 {
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+/* Avatar */
+.contact-avatar {
+    margin-bottom: 15px;
+}
+
+.contact-avatar img {
+    width: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+/* Container: form + links */
+.contact-container {
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Form */
+/* Contact form umumiy */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Social links container */
+.contact-social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Social linklar umumiy style */
+.social-link {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ranglar */
+.social-link.phone {
+    background: #28a745;
+}
+
+.social-link.phone:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.social-link.telegram {
+    background: #0088cc;
+}
+
+.social-link.telegram:hover {
+    background: #0077b5;
+    transform: scale(1.05);
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.social-link.instagram:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+    .contact-social {
+        flex-direction: column;
+    }
+
+    .social-link {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .navbar .actions .menu_icon .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Rasm o‘ng taraf */
+
+/* Telefon uchun */
+@media(max-width:768px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .hero-content {
+        order: 1;
+        max-width: 100%;
+    }
+
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Typewriter bazaviy uslub */
+#hero-title {
+    max-width: 800px;
+    /* bitta width belgilandi */
+    margin: 0 auto;
+    /* markazga chiqarish */
+    font-size: 2.2rem;
+    line-height: 1.3;
+    text-align: center;
+    /* responsivda o‘rtada turadi */
+    word-wrap: break-word;
+}
+
+/* Typewriter class */
+.typewriter {
+    display: inline-block;
+    border-right: 2px solid #fff;
+    white-space: normal;
+    /* matn yangi qatordan tushadi */
+    overflow: hidden;
+}
+
+
+
+/* Mobil */
+@media(max-width:768px) {
+    .hero {
+
+        text-align: center;
+
+    }
+
+    .hero-content {
+        order: 1;
+        width: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* About */
+.about {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about h2 {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-content li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-content i {
+    color: var(--red);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Services / Tariffs */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f7fa;
+}
+
+.services h2 {
+    color: var(--blue);
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    color: var(--red);
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--blue);
+}
+
+/* Extra Tariffs */
+.extra-tariffs,
+.outbound {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.extra-tariffs h3,
+.outbound h3 {
+    color: var(--red);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.extra-tariffs ul,
+.outbound ul {
+    list-style: none;
+    padding: 0;
+}
+
+.extra-tariffs li,
+.outbound li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.extra-tariffs i,
+.outbound i {
+    color: var(--blue);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Contact */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #8b1a1a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--blue);
+    color: #fff;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .actions .menu_icon .menu-icon {
+        display: block;
+        color: var(--blue);
+        transition: 0.3s ease;
+    }
+
+}
+
+/* Asosiy ranglar */
+:root {
+    --red: #B22222;
+    --blue: #002b45;
+    --bg: #f9f9f9;
+    --text: #333;
+    --card-bg: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--card-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.company {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+    transition: .3s;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#langSelect {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(to right, var(--red), var(--blue));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #fff;
+    color: var(--red);
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hero .btn:hover {
+    background: #eee;
+}
+
+/* About */
+.about {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about h2 {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-content li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-content i {
+    color: var(--red);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Services / Tariffs */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f7fa;
+}
+
+.services h2 {
+    color: var(--blue);
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    color: var(--red);
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--blue);
+}
+
+/* Extra Tariffs */
+.extra-tariffs,
+.outbound {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.extra-tariffs h3,
+.outbound h3 {
+    color: var(--red);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.extra-tariffs ul,
+.outbound ul {
+    list-style: none;
+    padding: 0;
+}
+
+.extra-tariffs li,
+.outbound li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.extra-tariffs i,
+.outbound i {
+    color: var(--blue);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Contact */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #8b1a1a;
+}
+
+/* Partners */
+.partners {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.partners h2 {
+    margin-bottom: 40px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.partners-grid img:hover {
+    filter: none;
+    transform: scale(1.05);
+}
+
+.extra-tariffs {
+    padding: 20px;
+    text-align: center;
+}
+
+.extra-tariffs h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.tariff-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tariff-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.tariff-card:hover {
+    transform: translateY(-5px);
+}
+
+.tariff-card i {
+    font-size: 28px;
+    color: #002b45;
+    margin-bottom: 10px;
+}
+
+.tariff-card h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #8b1a1a;
+}
+
+.tariff-card p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.outbound {
+    padding: 20px;
+    text-align: center;
+}
+
+.outbound h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.outbound-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.outbound-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.outbound-card:hover {
+    transform: translateY(-5px);
+}
+
+.outbound-card i {
+    font-size: 28px;
+    color: #002b45;
+    margin-bottom: 10px;
+}
+
+.outbound-card h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #8b1a1a;
+}
+
+.outbound-card p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.outbound-card .price {
+    font-size: 17px;
+    font-weight: bold;
+    color: #002b45;
+}
+
+.tariff-cards .price {
+    font-size: 17px;
+    font-weight: bold;
+    color: #002b45;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--blue);
+    color: #fff;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+
+/* Responsive */
+@media(max-width:768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        color: var(--blue);
+    }
+}
